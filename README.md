@@ -2,6 +2,14 @@
 
 An application built with Node, Express and EJS.
 
+# Install & Run
+- Download zip file
+- Extract file into desired directory
+- open terminal, navigate to project directory
+- run `npm install`
+- run `npm start`
+- open browser to: localhost:3000
+
 # Search
  - Loan Number: search for a specific loan by loan number
  - Broad Search: searches database for any attributes matching keyword
