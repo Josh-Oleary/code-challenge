@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/singleLoan.css">
+  <title>springEQ</title>
+</head>
+<body>
+  <h1>Search Result</h1>
+  <div class="single-loan-result">
+    <p>Name: <%= loan.last_name %>, <%= loan.first_name %> </p>
+    <p>Loan #: <%= loan.loan_number %> </p>
+    <p>Email: <%= loan.email %></p>
+    <p>Address: <%= loan.address %></p>
+    <p>City: <%= loan.city %></p>
+    <p>State: <%= loan.state %></p>
+    <p>Zip: <%= loan.zip %></p>
+  </div>
+  <div class="home-link-container">
+    <a class='home-link' href="/">Home</a>
+  </div>
+</body>
+</html>

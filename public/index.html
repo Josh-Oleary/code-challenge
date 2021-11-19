@@ -2,12 +2,47 @@
 
 <head>
   <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <h1>Loan Search App</h1>
+  <div class='home-page-container'>
+    <form action="/number" method="GET">
+      <label for="loan_number">Search by Loan Number:</label><br/>
+      <input type="number" name="loan_number" id="loan_number">
+      <button>Search</button>
+    </form>
+    <form id='attr_search' action="/search" method="GET">
+      <label for="query">Broad Search:</label><br/>
+      <input type="text" name="query" id="query">
+      <input type="submit" value="Search">
+    </form>
+    <form id='first_name_search' action="/search/first" method="GET">
+      <label for="first">First Name:</label><br/>
+      <input type="text" name="first" id="first">
+      <input type="submit" value="Search">
+    </form>
+    <form id='last_name_search' action="/search/last" method="GET">
+      <label for="last">Last Name:</label><br/>
+      <input type="text" name="last" id="last">
+      <input type="submit" value="Search">
+    </form>
+    <form id='city_search' action="/search/city" method="GET">
+      <label for="city">City:</label><br/>
+      <input type="text" name="city" id="city">
+      <input type="submit" value="Search">
+    </form>
+    <div class='home-link-container'>
+      <a class='home-link' href="/data">View All Loans</a>
+    </div>
+  </div>
 </body>
-
+<script>
+  function appendParams(){
+    const action_src = 'http://localhost/search/' + document.getElementById('query').value;
+    const my_form = document.getElementById('attr_search');
+    my_form.action = action_src;
+  }
+</script>
 </html>

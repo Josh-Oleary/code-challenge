@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/result.css">
+  <title>springEQ</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <div class='result-page-container'>
+    <div class="search-results-container">
+      <% loans.map((loan, i) => { %>
+        <div class="search-result">
+          <p><%= loan.item.last_name %>, <%= loan.item.first_name %> | <%= loan.item.state %> | #<%= loan.item.loan_number %></p>
+          <button type='button' class='collapsible'>Details</button>
+          <div class='content'>
+            <p>Name: <%= loan.item.last_name %>, <%= loan.item.first_name %> </p>
+            <p>Loan #: <%= loan.item.loan_number %></p>
+            <p>Email: <%= loan.item.email %></p>
+            <p>Address: <%= loan.item.address %></p>
+            <p>City: <%= loan.item.city %></p>
+            <p>State: <%= loan.item.state %></p>
+            <p>Zip: <%= loan.item.zip %></p>
+          </div>
+      </div>
+      <% }) %>
+    </div>
+    <div>
+      <form onsubmit="filterForm(loans)" class='filter-form'>
+        <label for="filter">Filter Results:</label>
+        <input type="text" name='filter' placeholder="Specific filter">
+        <input type="submit" value="Filter">
+      </form>
+      <div class="home-link-container">
+        <a class='home-link' href="/">Home</a>
+      </div>
+    </div>  
+  </div>
+</body>
+<script>
+
+  
+const coll = document.getElementsByClassName("collapsible");
+
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    const content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+
+</script>
+</html>

@@ -1,24 +1,19 @@
-body {
-	padding: 50px;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.single-loan-result {
+  width: 10em;
+  margin: auto;
+ 
 }
-
-a {
-	color: #00B7FF;
-}
-
-.home-page-container {
-	width: 25em;
-	margin: auto;
-	padding-left: 9em;
-}
-
 h1 {
-	text-align: center;
+  text-align: center;
+}
+
+.home-link {
+  text-decoration: none;
+  color: black;
 }
 
 .home-link-container {
-  width: 8em;
+  width: 3em;
   padding: .2em .8em;
   border-radius: 5em;
   box-shadow: 2px 3px 2px;
@@ -26,18 +21,11 @@ h1 {
   text-align: center;
   transition: 250ms;
   background-color: rgb(206, 206, 206);
-  margin-top: 3em;
-	margin-left: 3em;
 }
 
 .home-link-container:hover {
   background-color: rgb(105, 105, 105);
   box-shadow: 1px 2px 3px;
-}
-
-.home-link {
-  text-decoration: none;
-  color: black;
 }
 
 .home-link:hover {
