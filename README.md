@@ -6,7 +6,7 @@ An application built with Node, Express and EJS.
 - Download zip file
 - Extract file into desired directory
 - open terminal, navigate to project directory
-- `cd code-challenge-master1
+- `cd code-challenge-master`
 - run `npm install`
 - run `npm start`
 - open browser to: localhost:3000
