@@ -43,6 +43,20 @@ const options_city = {
   ]
 };
 
+const first_names = [];
+const last_names = [];
+const cities = [];
+
+function parseAutoCompleteData(arr){
+	for(let loan of data){
+		first_names.push(loan.first_name)
+		last_names.push(loan.last_name)
+		cities.push(loan.city)
+	}
+}
+
+parseAutoCompleteData(data);
+
 /* GET home page. */
 router.get("/", function(req, res) {
 	res.render("index");

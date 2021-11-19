@@ -28,11 +28,6 @@
       <% }) %>
     </div>
     <div>
-      <form onsubmit="filterForm(loans)" class='filter-form'>
-        <label for="filter">Filter Results:</label>
-        <input type="text" name='filter' placeholder="Specific filter">
-        <input type="submit" value="Filter">
-      </form>
       <div class="home-link-container">
         <a class='home-link' href="/">Home</a>
       </div>
@@ -40,23 +35,20 @@
   </div>
 </body>
 <script>
-
+  const coll = document.getElementsByClassName("collapsible");
   
-const coll = document.getElementsByClassName("collapsible");
-
-for (let i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    const content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
-
-
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  
+  
 </script>
 </html>
