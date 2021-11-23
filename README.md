@@ -1,23 +1,20 @@
 # Spring EQ Code Challenge
 
-An array of sample data can be reached on the server with a GET to /data
+An application built with Node, Express and EJS.
 
-A business user wants to see a very simple front-end display for all loans that have a specific attribute, or all attributes for one specific loan. If the user gives a single attribute, the front-end should display a list of all loans and their details for any loan that has that attribute. The user should also be able to search through that list by typing specific details into a search box. If the user gives a single loan identifier, all information for just that loan should be displayed.
+# Install & Run
+- Download zip file
+- Extract file into desired directory
+- open terminal, navigate to project directory
+- `cd code-challenge-master`
+- run `npm install`
+- run `npm start`
+- open browser to: localhost:3000
 
-Using the provided express server, create routes to return the 2 types of queries above. Then, use that express server to serve your implementation of the front-end.
+# Search
+ - Loan Number: search for a specific loan by loan number
+ - Broad Search: searches database for any attributes matching keyword
+ - First Name: searches database for first names matching keyword
+ - Last Name: searches database for last names matching keyword
+ - City: searches database for cities matching keyword
 
-Requirements:
-
-- Create the routes to serve the details according to specs:
-	- Get by loan_number
-	- Get by an attribute (e.g. First Name = Mike)
-- Create a front end to visualize the data
-
-A search box (fuzzy) to give me a list of loans based on either the loan number, first name, last name, city as I type it in (search-ahead)
-The returned list should show the loan number, state, last name and first name with a “detail” collapsible that shows the full record in an easy-to-read format
-
-Instructions:
-
-- Fork this repository
-- Push your code to your new forked repo
-- Let us know the name of your new repo
