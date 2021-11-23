@@ -3,6 +3,7 @@ const router = express.Router();
 const data = require("../data/sample.json");
 const Fuse = require("fuse.js");
 
+
 const options = {
   isCaseSensitive: false,
   findAllMatches: false,
@@ -59,7 +60,7 @@ parseAutoCompleteData(data);
 
 /* GET home page. */
 router.get("/", function(req, res) {
-	res.render("index");
+	res.render("index", { first: [...first_names], last: last_names, city: cities });
 });
 
 router.get("/data", function(req, res) {
